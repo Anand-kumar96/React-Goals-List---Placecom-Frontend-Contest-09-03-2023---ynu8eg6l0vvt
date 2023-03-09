@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 const GoalForm = ({onGoalHandler}) => {
   const [title,setTitle]=useState("");
   const [time,setTime]=useState("");
@@ -11,9 +12,10 @@ const GoalForm = ({onGoalHandler}) => {
       onGoalHandler(formData);
     setFormData({goal:"",by:""});
     }
+  
     return (
       <>
-       <h1>My Goals</h1>
+        <h1>My Goals</h1>
         <form onSubmit={submitHandler}>
           <input 
             type="text" 
