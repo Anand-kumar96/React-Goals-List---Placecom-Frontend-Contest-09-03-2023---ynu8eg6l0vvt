@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-
 const GoalForm = () => {
+  const [title,setTitle]=useState("");
+  const [time,setTime]=useState("");
     const [formData, setFormData] = useState({
       goal: "",
       by: ""
     });
-  
+    const submitHandler =(e)=>{
+      e.preventDefault();
+      onGoalHandler(formData);
+    setFormData({goal:"",by:""});
+    }
     return (
       <>
        <h1>My Goals</h1>
@@ -31,24 +36,3 @@ const GoalForm = () => {
 }
 
 export default GoalForm;
-const [title,setTitle]=useState("");
-
-  const [time,setTime]=useState("");
-
-    const [formData, setFormData] = useState({
-
-      goal: "",
-
-      by: ""
-
-    });
-
-    const submitHandler =(e)=>{
-
-      e.preventDefault();
-
-      onGoalHandler(formData);
-
-    setFormData({goal:"",by:""});
-
-    }
