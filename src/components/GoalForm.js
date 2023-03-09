@@ -8,17 +8,21 @@ const GoalForm = () => {
   
     return (
       <>
-        <h1>My Goals</h1>
-        <form>
+       <h1>My Goals</h1>
+        <form onSubmit={submitHandler}>
           <input 
             type="text" 
             name='goal' 
             placeholder='Goal...' 
+            value={formData.goal}
+            onChange={e => setFormData({...formData, goal: e.target.value})}
           />
           <input 
             type="text"
             name="by"
             placeholder='By...'
+            value={formData.by}
+            onChange={e => setFormData({...formData, by: e.target.value})}
           />
           <button>Add</button>
         </form>
@@ -27,38 +31,3 @@ const GoalForm = () => {
 }
 
 export default GoalForm;
-<h1>My Goals</h1>
-
-        <form onSubmit={submitHandler}>
-
-          <input 
-
-            type="text" 
-
-            name='goal' 
-
-            placeholder='Goal...' 
-
-            value={formData.goal}
-
-            onChange={e => setFormData({...formData, goal: e.target.value})}
-
-          />
-
-          <input 
-
-            type="text"
-
-            name="by"
-
-            placeholder='By...'
-
-            value={formData.by}
-
-            onChange={e => setFormData({...formData, by: e.target.value})}
-
-          />
-
-          <button>Add</button>
-
-        </form>
