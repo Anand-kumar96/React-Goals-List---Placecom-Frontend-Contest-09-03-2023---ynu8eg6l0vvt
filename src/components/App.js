@@ -8,10 +8,8 @@ const App = () => {
 const [allGoals, setAllGoals] = useState([]);
 
   const goalHandler = (goals)=>{
-
     return setAllGoals((prevGoals)=>[...prevGoals, goals]);
-
-  }
+ }
 
   return (
 
