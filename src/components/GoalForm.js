@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const GoalForm = () => {
+const GoalForm = ({onGoalHandler}) => {
   const [title,setTitle]=useState("");
   const [time,setTime]=useState("");
     const [formData, setFormData] = useState({
